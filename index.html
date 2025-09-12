@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pet Accessories Store</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <link href="CSS/style.css" rel="stylesheet">
+</head>
+<body>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="./Images/logos.png" width="60" height="60" class="me-2">
+    </a>
+
+    <!-- Navbar toggler for mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Search bar -->
+      <form class="d-flex ms-lg-3 my-2 my-lg-0" role="search" onsubmit="event.preventDefault();">
+  <div class="input-group">
+    <input id="searchInput" class="form-control" type="search" placeholder="Search products..." aria-label="Search">
+    <button class="btn btn-outline-secondary" type="button" onclick="handleSearch()">
+      <i class="fas fa-search"></i>
+    </button>
+  </div>
+</form>
+
+    <!-- Navbar content -->
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#products">Shop</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="#guide">Parenting Guide</a></li>
+
+        <li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a></li>
+      </ul>
+
+      
+
+      <!-- Cart button -->
+      <button class="btn btn-outline-light ms-lg-3 cart-btn" data-bs-toggle="offcanvas"
+        data-bs-target="#cartOffcanvas" aria-controls="cartOffcanvas">
+        🛒 Cart <span id="cart-count" class="badge bg-warning text-dark ms-1">0</span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+
+
+  <!-- HERO -->
+  <header class="hero text-center text-white bg-secondary py-5">
+    <div class="container">
+      <h1 class="display-5 fw-bold">Best Accessories for Your Pets</h1>
+      <p class="lead">Collars, toys, beds, grooming kits & more — curated for dogs & cats.</p>
+      <a href="#products" class="btn btn-light text-dark">Shop Accessories</a>
+
+    </div>
+  </header>
+
+  <!-- FILTERS + PRODUCTS -->
+  <section id="products" class="container my-5">
+    <div class="d-flex justify-content-between align-items-center mb-3"
+    1>
+      <h2 class="h2 mb-0">Accessories</h2>
+      <div class="d-flex align-items-center">
+        <div class="btn-group me-3" role="group">
+          <button class="btn btn-outline-secondary category-btn active" data-cat="all">All</button>
+          <button class="btn btn-outline-secondary category-btn" data-cat="dog">Dog</button>
+          <button class="btn btn-outline-secondary category-btn" data-cat="cat">Cat</button>
+          <button class="btn btn-outline-secondary category-btn" data-cat="general">General</button>
+        </div>
+        <small class="text-muted">Tip: use search to filter by name/description</small>
+      </div>
+    </div>
+    <div id="productGrid" class="row g-2"></div>
+  </section>
+
+    <section id="about" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">About Us</h2>
+    <p class="text-center text-dark mb-5 fs-5">
+      Welcome to <strong>Pet Paradise</strong>, your trusted destination for high-quality pet accessories.  
+      Our journey started with a simple vision: to make every pet’s life happier, healthier, and more comfortable.  
+      We know pets are not just animals – they are family. That’s why we carefully select every product to ensure safety, comfort, and style for your furry friends.
+    </p>
+
+    <div class="row g-4 align-items-center">
+      <div class="col-md-4 text-center">
+        <img src="../Images/happy dog.png" class="img-fluid rounded shadow" alt="Happy Dog" style="height: 400px;">
+        <h5 class="mt-3">Bringing Happiness</h5>
+        <p class="text-muted">
+          We provide toys, beds, and accessories that make tails wag and whiskers twitch.  
+          Our goal is to bring joy to every pet and peace of mind to every owner.
+        </p>
+      </div>
+
+      <div class="col-md-4 text-center">
+        <img src="../Images/cat with accesories.png" class="img-fluid rounded shadow" alt="Cat with Accessories" style="height: 400px;">
+        <h5 class="mt-3">Stylish Accessories</h5>
+        <p class="text-muted">
+          From trendy collars to comfy carriers, we design and source stylish products 
+          that ensure pets not only feel great but look amazing too.
+        </p>
+      </div>
+
+      <div class="col-md-4 text-center">
+        <img src="../Images/petcare3.png" class="img-fluid rounded shadow" alt="Pet Care" style="height: 400px;">
+        <h5 class="mt-3">Care & Comfort</h5>
+        <p class="text-muted">
+          Health and safety are at the heart of everything we do.  
+          Our grooming kits, food bowls, and first-aid products ensure your pets are cared for every day.
+        </p>
+      </div>
+    </div>
+
+    <div class="mt-5">
+      <h4 class="text-center">Our Mission</h4>
+      <p class="text-center text-dark fs-6">
+        At <strong>Pet Paradise</strong>, our mission is to create a pet-friendly world where every dog and cat 
+        feels loved, valued, and cared for. We aim to build a community of pet parents who share the same passion for 
+        giving their furry friends the best life possible.
+      </p>
+    </div>
+
+    <div class="mt-4">
+      <h4 class="text-center">Why Choose Us?</h4>
+      <ul class="list-group list-group-flush text-center">
+        <li class="list-group-item">✔ Premium-quality products handpicked for pets</li>
+        <li class="list-group-item">✔ Wide range of accessories for dogs, cats, and small pets</li>
+        <li class="list-group-item">✔ Affordable prices without compromising quality</li>
+        <li class="list-group-item">✔ Passionate team of pet lovers</li>
+        <li class="list-group-item">✔ Trusted by hundreds of happy pet parents</li>
+      </ul>
+    </div>
+  </div>
+</section>
+<!-- PARENTING GUIDE -->
+<section id="guide" class="py-5 bg-white">
+  <div class="container">
+    <h2 class="text-center mb-4">Pet Parenting Guide</h2>
+    <p class="text-center text-dark fs-5 mb-5">
+      Being a pet parent is a joyful journey filled with love and responsibility.  
+      Here are some essential tips to help you care for your furry companions.
+    </p>
+
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-4 text-center">
+        <img src="../Images/feeding.jpeg" class="img-fluid rounded shadow" alt="Feeding" style="height: 250px;">
+        <h5 class="mt-3">Healthy Feeding</h5>
+        <p class="text-muted">
+          Ensure a balanced diet with the right mix of proteins, carbs, and vitamins.  
+          Always keep fresh water available for your pets.
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4 text-center">
+        <img src="../Images/pet walking.jpeg" class="img-fluid rounded shadow" alt="Exercise" style="height: 250px;">
+        <h5 class="mt-3">Daily Exercise</h5>
+        <p class="text-muted">
+          Regular walks and playtime keep pets active and healthy.  
+          It also strengthens the bond between you and your furry friend.
+        </p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4 text-center">
+        <img src="../Images/vetcare.jpeg" class="img-fluid rounded shadow" alt="Vet Care" style="height: 250px;">
+        <h5 class="mt-3">Regular Vet Visits</h5>
+        <p class="text-muted">
+          Routine check-ups, vaccinations, and timely care  
+          ensure your pets live long and healthy lives.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- CONTACT -->
+<section id="contact" class="py-5">
+  <div class="container">
+    <h3 class="h3 text-center mb-4  fw-bold">Contact Us</h3>
+    <div class="row g-4 justify-content-center">
+
+      <!-- Contact Form -->
+      <div class="col-md-6">
+        <form id="contactForm" class="row g-3"
+          onsubmit="event.preventDefault(); alert('Thanks! We will respond soon.');">
+          <div class="col-md-6">
+            <input class="form-control" placeholder="Your Name" required>
+          </div>
+          <div class="col-md-6">
+            <input class="form-control" placeholder="Email" type="email" required>
+          </div>
+          <div class="col-12">
+            <textarea class="form-control" rows="4" placeholder="Your Message" required></textarea>
+          </div>
+          <div class="col-12">
+            <button class="btn btn-success w-100" type="submit">Send Message</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Google Map -->
+      <div class="col-md-6">
+        <div class="ratio ratio-16x9 shadow rounded">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3772.0361381866144!2d72.82939121532623!3d19.11871968707416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9ff11e1a3ff%3A0x78f839ad4e0c7e3b!2sMumbai!5e0!3m2!1sen!2sin!4v1674040037155!5m2!1sen!2sin"
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+          </iframe>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PAYMENT MODAL -->
+<div class="modal fade" id="paymentModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content p-3">
+      <div class="modal-header">
+        <h5 class="modal-title">Choose Payment Method</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <form id="paymentForm">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="payment" id="cod" value="COD" checked>
+            <label class="form-check-label" for="cod">Cash on Delivery</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="payment" id="upi" value="UPI">
+            <label class="form-check-label" for="upi">UPI (Google Pay / PhonePe / Paytm)</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="payment" id="card" value="Card">
+            <label class="form-check-label" for="card">Credit / Debit Card</label>
+          </div>
+          <div class="mt-3">
+            <button type="submit" class="btn btn-success w-100">Proceed to Pay</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+  <!-- LOGIN MODAL -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Login</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <form id="loginForm" onsubmit="event.preventDefault(); handleLogin();">
+          <div class="mb-3">
+            <label>Email</label>
+            <input type="email" class="form-control" id="loginEmail" required>
+          </div>
+          <div class="mb-3">
+            <label>Password</label>
+            <input type="password" class="form-control" id="loginPassword" required>
+          </div>
+          <button type="submit" class="btn btn-primary w-100 mb-2">Login</button>
+          <p class="text-center small">
+            Don’t have an account? 
+            <a href="#" data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-dismiss="modal">Create one</a>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- REGISTER MODAL -->
+<div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Create Account</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <form id="registerForm" onsubmit="event.preventDefault(); handleRegister();">
+          <div class="mb-3">
+            <label>Name</label>
+            <input type="text" class="form-control" id="registerName" required>
+          </div>
+          <div class="mb-3">
+            <label>Email</label>
+            <input type="email" class="form-control" id="registerEmail" required>
+          </div>
+          <div class="mb-3">
+            <label>Password</label>
+            <input type="password" class="form-control" id="registerPassword" required>
+          </div>
+          <button type="submit" class="btn btn-success w-100">Register</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <!-- OFFCANVAS CART -->
+  <div class="offcanvas offcanvas-end" id="cartOffcanvas">
+    <div class="offcanvas-header">
+      <h5>Your Cart</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column">
+      <div id="cartItems" class="list-group mb-3"></div>
+      <div class="mt-auto">
+        <div class="d-flex justify-content-between mb-2">
+          <strong>Grand Total</strong>
+          <strong>₹<span id="grandTotal">0</span></strong>
+        </div>
+        <div id="discountRow" class="d-flex justify-content-between text-success mb-2" style="display:none;">
+          <strong>Discount</strong>
+          <strong>-₹<span id="discountAmount">0</span></strong>
+        </div>
+        <div class="d-flex justify-content-between">
+          <strong>Final Total</strong>
+          <strong>₹<span id="finalTotal">0</span></strong>
+
+        </div>
+  <div class="d-flex justify-content-between mt-3">
+  <button type="button" class="btn btn-secondary" data-bs-dismiss="offcanvas">Close</button>
+  <button type="button" class="btn btn-success" onclick="checkout()">Checkout</button>
+</div>
+
+
+      </div>
+    </div>
+  </div>
+  
+  
+
+   <!-- FOOTER -->
+<footer class="pt-5" style="background-color: #f8f3e7; color: #333;">
+  <div class="container">
+    <div class="row">
+
+      <!-- Logo + About -->
+      <div class="col-lg-3 col-md-6 mb-4 text-center text-md-start">
+        <img src="../Images/logos.png" width="80" height="80" class="mb-3">
+        <h5 class="fw-bold">Pet Paradise</h5>
+        <p class="small">
+          Your trusted store for premium pet accessories.  
+          Making pets happier, healthier, and stylish since 2025.  
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-lg-3 col-md-6 mb-4 text-center text-md-start">
+        <h5 class="fw-bold">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="#products" class="text-decoration-none text-dark">Shop</a></li>
+          <li><a href="#about" class="text-decoration-none text-dark">About Us</a></li>
+          <li><a href="#guide" class="text-decoration-none text-dark">Parenting Guide</a></li>
+          <li><a href="#contact" class="text-decoration-none text-dark">Contact</a></li>
+          <li><a href="#" data-bs-toggle="modal" data-bs-target="#loginModal" class="text-decoration-none text-dark">Login</a></li>
+        </ul>
+      </div>
+
+      <!-- Resources -->
+      <div class="col-lg-3 col-md-6 mb-4 text-center text-md-start">
+        <h5 class="fw-bold">Resources</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-decoration-none text-dark">FAQs</a></li>
+          <li><a href="#" class="text-decoration-none text-dark">Pet Care Tips</a></li>
+          <li><a href="#" class="text-decoration-none text-dark">Return Policy</a></li>
+          <li><a href="#" class="text-decoration-none text-dark">Terms & Conditions</a></li>
+          <li><a href="#" class="text-decoration-none text-dark">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact + Newsletter -->
+      <div class="col-lg-3 col-md-6 mb-4 text-center text-md-start">
+        <h5 class="fw-bold">Contact Us</h5>
+        <p class="small mb-1"><i class="fas fa-map-marker-alt me-2"></i>Mumbai, India</p>
+        <p class="small mb-1"><i class="fas fa-phone me-2"></i>+91 98765 43210</p>
+        <p class="small mb-3"><i class="fas fa-envelope me-2"></i>support@petparadise.com</p>
+
+        <!-- Newsletter -->
+        <form class="d-flex mb-3">
+          <input type="email" class="form-control me-2" placeholder="Your Email">
+          <button class="btn btn-dark btn-sm">Subscribe</button>
+        </form>
+
+        <!-- Social icons -->
+        <a href="#" class="text-dark me-2"><i class="fab fa-facebook fa-lg"></i></a>
+        <a href="#" class="text-dark me-2"><i class="fab fa-instagram fa-lg"></i></a>
+        <a href="#" class="text-dark me-2"><i class="fab fa-twitter fa-lg"></i></a>
+        <a href="#" class="text-dark"><i class="fab fa-whatsapp fa-lg"></i></a>
+      </div>
+    </div>
+
+    <hr class="border-dark">
+    <p class="text-center small mb-0">© 2025 Pet Paradise | Designed with ❤️ for pets</p>
+  </div>
+</footer>
+
+
+  <!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="Js/Script.js"></script>
+</body>
+</html>

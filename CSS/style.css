@@ -1,0 +1,197 @@
+/* Navbar custom */
+
+/* Optional: navbar links color */
+.navbar {
+    background-color: #f8f3e7 !important;
+       padding: 10px 20px;
+}
+.navbar .nav-link {
+    color:black !important;
+}
+
+.navbar .nav-link:hover {
+    color: maroon !important;  /* gold hover */
+}
+.navbar-brand {
+    color:red;
+
+}
+.navbar-brand img {
+    filter: brightness(0.7);  /* 0.7 makes it darker, 1 = normal, 0 = full black */
+}
+
+
+    /* Search Bar */
+.input-group .form-control {
+    border: 2px solid rgb(63, 11, 11);
+    border-radius: 20px 0 0 20px;
+    color: rgb(161, 67, 67);
+    width: 350px;   /* 👈 makes search bar bigger */
+    background-color: #fff; /* removes grey bg */
+}
+
+/* Search Button */
+.input-group .btn {
+    border: 2px solid rgb(63, 11, 11);
+    border-radius: 0 20px 20px 0;
+    background-color: rgb(63, 11, 11); /* dark background */
+    color: white; /* search icon visible */
+}
+.input-group .btn:hover {
+    background-color: #8b0000; /* dark red hover */
+    color: white;
+}
+
+/* Cart Button */
+.cart-btn {
+    margin-left: 40px !important;
+        background-color:#3f0b0b;
+
+     /* 👈 pushes cart farther */
+}
+
+/* Cart button styling */
+.btn-outline-dark {
+    border: 2px solid #3f0b0b;
+    background-color:maroon;
+    color:black;
+}
+.btn-outline-dark:hover {
+    background-color: rgb(63, 11, 11);
+    color: black;
+}
+
+
+.hero {
+  background: url('../Images/banner.png') center/cover no-repeat;
+  height: 100vh; 
+  min-height:260px; 
+  display:flex; 
+  align-items:center; 
+  color:#fff;
+  text-shadow:0 4px 12px rgba(0,0,0,0.45);
+}
+.container .display-5 .lead{
+  background-color: #7b1113 !important; 
+  color: #f8f3e7;
+  /* dark red background */
+}
+
+.container .lead{
+    color: #f8f3e7;
+
+
+}
+.container .display-5 {
+  color: #f8f3e7;
+}
+.d-flex .h2{
+        color:black;
+
+
+}
+.category-btn {
+  border-color: #7b1113 !important;   /* dark red border */
+  color: #7b1113 !important;          /* text color */
+}
+
+.category-btn:hover,
+.category-btn.active {
+  background-color: #7b1113 !important; /* dark red background */
+  color: #fff !important;              /* white text */
+}
+@media (max-width: 767px) {
+  .hero {
+    height: 28vh;
+  }
+  .card {
+    max-width: 160px;
+  }
+  .card img {
+    max-height: 100px;
+  }
+  #cartOffcanvas {
+    width: 250px !important;
+  }
+}
+.card {
+  max-width: 220px;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.card img {
+  max-height: 120px;
+  width: auto;
+  object-fit: contain;
+  margin: 0 auto;
+  display: block;
+}
+/* ===== CART OFFCANVAS ===== */
+#cartOffcanvas {
+  width: 300px !important;  /* proper size */
+  max-width: 100%;
+  background-color: #f8f9fa;   /* light gray background */
+  color: #212529; 
+}
+.offcanvas .list-group-item img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-right: 6px;
+}
+.offcanvas .list-group-item {
+  display: flex;
+  align-items: center;
+  padding: 6px 8px;
+  font-size: 12px;
+  background: #fff; 
+
+}
+.offcanvas .list-group-item .cart-text {
+  font-size: 12px;
+  line-height: 1.2;
+}
+.offcanvas .list-group-item .btn {
+  padding: 2px 6px;
+  font-size: 11px;
+}
+
+/* Sticky totals */
+#cartOffcanvas .offcanvas-body {
+  display: flex;
+  flex-direction: column;
+}
+#cartOffcanvas .offcanvas-body > .mt-auto {
+  position: sticky;
+  bottom: 0;
+  background: #fff;
+  padding-top: 10px;
+  border-top: 1px solid #ddd;
+}
+#cartOffcanvas strong {
+  color: #7b1113; /* dark red highlight */
+}
+#cartOffcanvas .offcanvas-header {
+  background-color: #7b1113;   /* dark red */
+  color: #fff;                 /* white text */
+}
+
+#cartOffcanvas .btn-close {
+  filter: invert(1); /* makes close button white */
+}
+/* Footer link spacing */
+footer .list-unstyled li {
+  margin-bottom: 8px;   /* increase spacing (default is too tight) */
+}
+
+footer .list-unstyled a {
+  display: inline-block; /* ensures spacing applies well */
+}
+
+
+
+
+
+

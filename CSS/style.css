@@ -1,125 +1,127 @@
-/* Navbar custom */
-
-/* Optional: navbar links color */
+/* =========================
+   NAVBAR
+========================= */
 .navbar {
-    background-color: #f8f3e7 !important;
-       padding: 10px 20px;
+  background-color: #f8f3e7 !important;
+  padding: 10px 20px;
 }
+
 .navbar .nav-link {
-    color:black !important;
+  color: black !important;
 }
 
 .navbar .nav-link:hover {
-    color: maroon !important;  /* gold hover */
+  color: maroon !important;
 }
+
 .navbar-brand {
-    color:red;
-
+  color: red;
+  display: flex;
+  align-items: center;
+  margin-left: 0 !important;
+  padding-left: 0 !important;
 }
+
 .navbar-brand img {
-    filter: brightness(0.7);  /* 0.7 makes it darker, 1 = normal, 0 = full black */
+  filter: brightness(0.7);
 }
 
-
-    /* Search Bar */
+/* =========================
+   SEARCH BAR
+========================= */
 .input-group .form-control {
-    border: 2px solid rgb(63, 11, 11);
-    border-radius: 20px 0 0 20px;
-    color: rgb(161, 67, 67);
-    width: 350px;   /* 👈 makes search bar bigger */
-    background-color: #fff; /* removes grey bg */
+  border: 2px solid rgb(63, 11, 11);
+  border-radius: 20px 0 0 20px;
+  color: rgb(161, 67, 67);
+  width: 350px;
+  background-color: #fff;
 }
 
-/* Search Button */
 .input-group .btn {
-    border: 2px solid rgb(63, 11, 11);
-    border-radius: 0 20px 20px 0;
-    background-color: rgb(63, 11, 11); /* dark background */
-    color: white; /* search icon visible */
+  border: 2px solid rgb(63, 11, 11);
+  border-radius: 0 20px 20px 0;
+  background-color: rgb(63, 11, 11);
+  color: white;
 }
+
 .input-group .btn:hover {
-    background-color: #8b0000; /* dark red hover */
-    color: white;
+  background-color: #8b0000;
+  color: white;
 }
 
-/* Cart Button */
+/* =========================
+   CART BUTTON
+========================= */
 .cart-btn {
-    margin-left: 40px !important;
-        background-color:#3f0b0b;
-
-     /* 👈 pushes cart farther */
+  margin-left: 40px !important;
+  background-color: #3f0b0b;
 }
 
-/* Cart button styling */
 .btn-outline-dark {
-    border: 2px solid #3f0b0b;
-    background-color:maroon;
-    color:black;
+  border: 2px solid #3f0b0b;
+  background-color: maroon;
+  color: black;
 }
+
 .btn-outline-dark:hover {
-    background-color: rgb(63, 11, 11);
-    color: black;
+  background-color: rgb(63, 11, 11);
+  color: black;
 }
 
-
+/* =========================
+   HERO BANNER
+========================= */
 .hero {
   background: url('../Images/banner.png') center/cover no-repeat;
-  height: 100vh; 
-  min-height:260px; 
-  display:flex; 
-  align-items:center; 
-  color:#fff;
-  text-shadow:0 4px 12px rgba(0,0,0,0.45);
+  height: 100vh;
+  min-height: 260px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.45);
 }
-.container .display-5 .lead{
-  background-color: #7b1113 !important; 
+
+.container .display-5 .lead {
+  background-color: #7b1113 !important;
   color: #f8f3e7;
-  /* dark red background */
 }
 
-.container .lead{
-    color: #f8f3e7;
-
-
+.container .lead {
+  color: #f8f3e7;
 }
+
 .container .display-5 {
   color: #f8f3e7;
 }
-.d-flex .h2{
-        color:black;
 
-
+.d-flex .h2 {
+  color: black;
 }
+
+/* =========================
+   CATEGORY BUTTONS
+========================= */
 .category-btn {
-  border-color: #7b1113 !important;   /* dark red border */
-  color: #7b1113 !important;          /* text color */
+  border-color: #7b1113 !important;
+  color: #7b1113 !important;
 }
 
 .category-btn:hover,
 .category-btn.active {
-  background-color: #7b1113 !important; /* dark red background */
-  color: #fff !important;              /* white text */
+  background-color: #7b1113 !important;
+  color: #fff !important;
 }
-@media (max-width: 767px) {
-  .hero {
-    height: 28vh;
-  }
-  .card {
-    max-width: 160px;
-  }
-  .card img {
-    max-height: 100px;
-  }
-  #cartOffcanvas {
-    width: 250px !important;
-  }
-}
+
+/* =========================
+   PRODUCT CARDS
+========================= */
 .card {
-  max-width: 220px;
+  max-width: 100% !important;
   margin: auto;
   border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
+
 .card img {
   max-height: 120px;
   width: auto;
@@ -127,13 +129,17 @@
   margin: 0 auto;
   display: block;
 }
-/* ===== CART OFFCANVAS ===== */
+
+/* =========================
+   CART OFFCANVAS
+========================= */
 #cartOffcanvas {
-  width: 300px !important;  /* proper size */
+  width: 240px !important;
   max-width: 100%;
-  background-color: #f8f9fa;   /* light gray background */
-  color: #212529; 
+  background-color: #f8f9fa;
+  color: #212529;
 }
+
 .offcanvas .list-group-item img {
   width: 40px;
   height: 40px;
@@ -141,57 +147,321 @@
   border-radius: 5px;
   margin-right: 6px;
 }
+
 .offcanvas .list-group-item {
   display: flex;
   align-items: center;
   padding: 6px 8px;
   font-size: 12px;
-  background: #fff; 
-
+  background: #fff;
 }
+
 .offcanvas .list-group-item .cart-text {
   font-size: 12px;
   line-height: 1.2;
 }
+
 .offcanvas .list-group-item .btn {
   padding: 2px 6px;
   font-size: 11px;
 }
 
-/* Sticky totals */
 #cartOffcanvas .offcanvas-body {
   display: flex;
   flex-direction: column;
 }
-#cartOffcanvas .offcanvas-body > .mt-auto {
+
+#cartOffcanvas .offcanvas-body>.mt-auto {
   position: sticky;
   bottom: 0;
   background: #fff;
   padding-top: 10px;
   border-top: 1px solid #ddd;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
 }
+
 #cartOffcanvas strong {
-  color: #7b1113; /* dark red highlight */
+  color: #7b1113;
 }
+
 #cartOffcanvas .offcanvas-header {
-  background-color: #7b1113;   /* dark red */
-  color: #fff;                 /* white text */
+  background-color: #7b1113;
+  color: #fff;
 }
 
 #cartOffcanvas .btn-close {
-  filter: invert(1); /* makes close button white */
+  filter: invert(1);
 }
-/* Footer link spacing */
+
+/* =========================
+   FOOTER
+========================= */
 footer .list-unstyled li {
-  margin-bottom: 8px;   /* increase spacing (default is too tight) */
+  margin-bottom: 8px;
 }
 
 footer .list-unstyled a {
-  display: inline-block; /* ensures spacing applies well */
+  display: inline-block;
 }
 
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+@media (max-width: 991px) {
+  .navbar .input-group .form-control {
+    width: 200px;
+  }
 
+  .cart-btn {
+    margin-left: 10px !important;
+    font-size: 14px;
+    padding: 4px 8px;
+  }
 
+  .navbar-collapse {
+    background-color: #f8f3e7;
+    padding: 15px;
+  }
 
+  .navbar-nav .nav-link {
+    color: #3f0b0b !important;
+    font-weight: 500;
+  }
 
+  .navbar-nav .nav-link:hover {
+    color: #7b1113 !important;
+  }
 
+  .cart-btn {
+    margin-left: 0 !important;
+    margin-top: 10px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero {
+    height: 40vh;
+    background-size: cover;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  .card img {
+    max-height: 100px;
+  }
+
+  #cartOffcanvas {
+    width: 250px !important;
+  }
+
+  #contactForm input,
+  #contactForm textarea {
+    font-size: 14px;
+  }
+
+  footer .col-md-6,
+  footer .col-lg-3 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: 30vh;
+    padding: 20px 10px;
+  }
+
+  .hero h1 {
+    font-size: 1.2rem;
+  }
+
+  .hero p {
+    font-size: 0.8rem;
+  }
+
+  .input-group .form-control {
+    width: 100% !important;
+  }
+
+  .category-btn {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+}
+
+/* =========================
+   NAVBAR FLEX
+========================= */
+.navbar .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.navbar form {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.navbar form input {
+  max-width: 350px;
+}
+
+/* =========================
+   NAVBAR TOGGLER
+========================= */
+.navbar-toggler {
+  border: none;
+  outline: none;
+  padding: 6px 10px;
+  margin-left: auto;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(63, 11, 11, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active {
+  box-shadow: none;
+}
+
+/* =========================
+   MOBILE NAVBAR FIX (<576px)
+========================= */
+@media (max-width: 576px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .navbar .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+
+  .navbar-brand {
+    margin-right: 10px !important;
+    flex-shrink: 0;
+  }
+
+  .navbar form {
+    display: flex;
+    flex-grow: 1;
+    margin: 5px 0;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  .navbar form .input-group {
+    width: 100%;
+    min-width: 0;
+    flex-wrap: nowrap;
+  }
+
+  .navbar form .form-control {
+    flex: 1 1 auto;
+    min-width: 0;
+    max-width: 150px;
+  }
+
+  .navbar form .btn {
+    flex-shrink: 0;
+  }
+
+  .navbar-toggler {
+    margin-left: 5px;
+  }
+
+  .cart-btn {
+    margin-left: 5px !important;
+    margin-top: 5px;
+    width: auto;
+    flex-shrink: 0;
+    font-size: 14px;
+    padding: 4px 8px;
+  }
+
+  .navbar-collapse {
+    width: 100%;
+    background-color: #f8f3e7;
+    padding: 10px 0;
+  }
+
+  .navbar-nav .nav-link {
+    color: #3f0b0b !important;
+    font-weight: 500;
+  }
+
+  .navbar-nav .nav-link:hover {
+    color: #7b1113 !important;
+  }
+}
+
+.navbar,
+.navbar .container,
+.navbar form,
+.navbar form .input-group,
+.navbar form .form-control,
+.navbar form .btn,
+.cart-btn {
+  max-width: 100% !important;
+}
+
+html,
+body {
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+}
+
+/* Make all elements respect screen width */
+* {
+  box-sizing: border-box;
+}
+
+/* General: let small text wrap */
+#products small {
+  white-space: normal;
+  word-break: break-word;
+}
+
+/* On mobile: push Tip below filters */
+@media (max-width: 576px) {
+  #products .d-flex.align-items-center {
+    flex-wrap: wrap;
+    /* allow wrapping */
+  }
+
+  #products small {
+    display: block;
+    /* force on new line */
+    margin-top: 5px;
+    /* little spacing */
+    font-size: 12px;
+    /* slightly smaller */
+    text-align: center;
+    /* optional: center it */
+    width: 100%;
+    /* ensure full width */
+  }
+}
